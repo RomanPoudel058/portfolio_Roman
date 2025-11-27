@@ -91,6 +91,48 @@ nav a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Media section styles */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  justify-items: center;
+}
+
+@media (min-width: 860px) {
+  .media-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.media-item {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+}
+
+.media-item h3 {
+  margin-bottom: .6rem;
+  font-size: 1.05rem;
+}
+
+.media-item video,
+.media-item audio,
+.media-item canvas {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  background: #000; /* visible background for canvas/video poster */
+}
+
+.hint {
+  font-size: .9rem;
+  color: #666;
+  margin-top: .5rem;
+}
+
+
 
 .contact-form {
     display: flex;

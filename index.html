@@ -73,6 +73,41 @@
     </div>
 </section>
 
+<!-- Media Section -->
+<section id="media" class="section">
+  <h2>Media</h2>
+
+  <div class="media-grid">
+    <!-- Video -->
+    <div class="media-item">
+      <h3>Project Demo (Video)</h3>
+      <!-- Use a poster image if you have one: poster="media/video-poster.jpg" -->
+      <video id="demo-video" controls width="480" preload="metadata">
+        <source src="media/video.mp4" type="video/mp4">
+        <!-- Fallback message -->
+        Your browser does not support the video tag. You can <a href="media/video.mp4">download the video</a>.
+      </video>
+    </div>
+
+    <!-- Audio -->
+    <div class="media-item">
+      <h3>Project Narration (Audio)</h3>
+      <audio id="demo-audio" controls preload="metadata">
+        <source src="media/audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element. <a href="media/audio.mp3">Download audio</a>.
+      </audio>
+    </div>
+
+    <!-- Canvas -->
+    <div class="media-item">
+      <h3>Canvas Sketch</h3>
+      <canvas id="demo-canvas" width="480" height="270" aria-label="Demo Canvas drawing"></canvas>
+      <p class="hint">This canvas is drawn by JavaScript (simple demo).</p>
+    </div>
+  </div>
+</section>
+
+
 <section id="contact" class="section">
     <h2>Contact</h2>
     <p>If you’d like to work together or say hi, use the form below.</p>
