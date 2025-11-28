@@ -11,7 +11,6 @@ const observer = new IntersectionObserver((entries) => {
 bars.forEach((bar) => observer.observe(bar));
 
 // ========== CONTACT FORM (VALIDATION + LOCALSTORAGE + REDIRECT) ==========
-// ========== CONTACT FORM (VALIDATION + LOCALSTORAGE + REDIRECT) ==========
 const form = document.getElementById("contact-form");
 
 if (form) {
@@ -57,7 +56,7 @@ if (form) {
     formMsg.style.color = "lightgreen";
 
     setTimeout(() => {
-      window.location.href = "form_details.html";
+     location.href = "form_details.html";
     }, 800);
   });
 }
