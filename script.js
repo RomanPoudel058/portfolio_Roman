@@ -11,6 +11,7 @@ const observer = new IntersectionObserver((entries) => {
 bars.forEach((bar) => observer.observe(bar));
 
 // ========== CONTACT FORM (VALIDATION + LOCALSTORAGE + REDIRECT) ==========
+// ========== CONTACT FORM (VALIDATION + LOCALSTORAGE + REDIRECT) ==========
 const form = document.getElementById("contact-form");
 
 if (form) {
@@ -60,3 +61,45 @@ if (form) {
     }, 800);
   });
 }
+
+// ========== THEME TOGGLE ==========
+
+// Check saved theme
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    document.getElementById("theme-toggle").innerText = "☀ Light Mode";
+}
+
+// Toggle mode on click
+document.getElementById("theme-toggle").addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    // Update button text
+    const isDark = document.body.classList.contains("dark-mode");
+    document.getElementById("theme-toggle").innerText = isDark ? "☀ Light Mode" : "🌙 Dark Mode";
+
+    // Store user preference
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+// ========== BACK TO TOP BUTTON ==========
+
+const backToTop = document.getElementById("backToTop");
+
+// Show/Hide Button on Scroll
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {   // Show after scrolling 300px
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+// Smooth Scroll to Top When Clicked
+backToTop.addEventListener("click", () => {
+    window.scrollTo({ 
+        top: 0, 
+        behavior: "smooth" 
+    });
+});
+

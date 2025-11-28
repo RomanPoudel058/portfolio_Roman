@@ -41,6 +41,82 @@ nav a:hover {
     background: white;
 }
 
+
+/* Toggle Button Styling */
+#theme-toggle {
+    background: #00c8ff;
+    color: white;
+    border: none;
+    padding: .6rem 1rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#theme-toggle:hover {
+    background: #0099c7;
+}
+
+/* DARK MODE THEME */
+.dark-mode {
+    background: #111;
+    color: #100f0f;
+}
+
+.dark-mode nav {
+    background: #222;
+}
+
+.dark-mode nav a {
+    color: white;
+}
+
+.dark-mode nav a:hover {
+    color: #00c8ff;
+}
+
+.dark-mode .section,
+.dark-mode #skills,
+.dark-mode form {
+    background: #1a1a1a;
+    border-color: #333;
+    color: #fff;
+}
+
+.dark-mode .project-card,
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+    background: #222;
+    color: #fff;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #00c8ff;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;            /* Hidden by default */
+    transition: opacity .3s ease;
+}
+
+#backToTop:hover {
+    background: #0099c7;
+}
+
+/* Dark Mode Support (optional) */
+.dark-mode #backToTop {
+    background: #0085b2;
+}
+
+
 .profile-img {
     width: 150px;
     border-radius: 50%;
