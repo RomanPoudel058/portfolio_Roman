@@ -102,3 +102,23 @@ backToTop.addEventListener("click", () => {
     });
 });
 
+// ================= IMAGE SLIDER =================
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+document.getElementById("next").onclick = () => {
+    index = (index + 1) % slides.length;
+    updateSlider();
+};
+
+document.getElementById("prev").onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlider();
+};
+
+function updateSlider() {
+    document.querySelector(".slider").style.transform = `translateX(-${index * 100}%)`;
+}
+
+
+
