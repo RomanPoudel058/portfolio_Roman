@@ -4,57 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Submission Details</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- ---------- PROPER CSS ---------- -->
     <style>
-        body { background: #f4f4f4; font-family: Arial, sans-serif; }
-        .details-container {
-            max-width: 600px;
-            margin: 4rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        body {
+            background: #0f172a;
+            font-family: Poppins, Arial, sans-serif;
+            color: #e2e8f0;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
-        .details-container h2 { color: #00c8ff; }
-        .detail-item {
-            text-align: left;
-            margin: 1.5rem 0;
-            padding: 1rem;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border-left: 5px solid #00c8ff;
+
+        h1 {
+            margin-top: 50px;
+            font-size: 2rem;
+            color: #38bdf8;
         }
-        .back-link {
-            display: inline-block;
-            margin-top: 2rem;
-            color: #00c8ff;
-            text-decoration: none;
-            font-weight: bold;
+
+        p {
             font-size: 1.1rem;
         }
-        .back-link:hover { text-decoration: underline; }
+
+        .details-wrapper {
+            width: 90%;
+            max-width: 650px;
+            margin: 40px auto;
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 18px rgba(0,255,255,0.15);
+        }
+
+        .detail-box {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 15px;
+            border-left: 5px solid #38bdf8;
+        }
+
+        .detail-title {
+            color: #38bdf8;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        a.back-btn {
+            display: inline-block;
+            margin-top: 35px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #38bdf8;
+            padding: 12px 25px;
+            border-radius: 6px;
+            border: 2px solid #38bdf8;
+            transition: 0.3s;
+        }
+
+        a.back-btn:hover {
+            background: #38bdf8;
+            color: black;
+            box-shadow: 0 0 12px #38bdf8;
+        }
     </style>
 </head>
+
 <body>
-    <div class="details-container">
-        <h2>Thank You for Contacting Me!</h2>
-        <p>Here are the details you submitted:</p>
 
-        <div class="detail-item">
-            <strong>Name:</strong> <span id="display-name">Loading...</span>
-        </div>
-        <div class="detail-item">
-            <strong>Email:</strong> <span id="display-email">Loading...</span>
-        </div>
-        <div class="detail-item">
-            <strong>Message:</strong><br>
-            <p id="display-message" style="margin-top: 0.5rem; white-space: pre-wrap;">Loading...</p>
+    <h1>Thank You for Contacting Me!</h1>
+    <p>Your submitted details are displayed below:</p>
+
+    <div class="details-wrapper">
+
+        <div class="detail-box">
+            <p class="detail-title">Name:</p>
+            <p id="display-name">Loading...</p>
         </div>
 
-        <a href="index.html" class="back-link">Back to Portfolio</a>
+        <div class="detail-box">
+            <p class="detail-title">Email:</p>
+            <p id="display-email">Loading...</p>
+        </div>
+
+        <div class="detail-box">
+            <p class="detail-title">Message:</p>
+            <p id="display-message">Loading...</p>
+        </div>
     </div>
-    
+
+    <a class="back-btn" href="index.html">← Back to Portfolio</a>
+
     <script src="form_details.js"></script>
 </body>
 </html>

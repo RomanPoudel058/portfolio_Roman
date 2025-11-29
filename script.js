@@ -56,7 +56,7 @@ if (form) {
     formMsg.style.color = "lightgreen";
 
     setTimeout(() => {
-     location.href = "form_details.html";
+      window.location.href = "form_details.html";
     }, 800);
   });
 }
