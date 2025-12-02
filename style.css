@@ -91,7 +91,6 @@ nav a:hover {
     color: #fff;
 }
 
-/* Back to Top Button */
 #backToTop {
     position: fixed;
     bottom: 25px;
@@ -103,7 +102,7 @@ nav a:hover {
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
-    display: none;            /* Hidden by default */
+    display: none;       
     transition: opacity .3s ease;
 }
 
@@ -111,7 +110,6 @@ nav a:hover {
     background: #0099c7;
 }
 
-/* Dark Mode Support (optional) */
 .dark-mode #backToTop {
     background: #0085b2;
 }
@@ -142,30 +140,45 @@ nav a:hover {
     margin-top: 2rem;
     border-radius: 8px;
 }
-
-.projects {
+.projects1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 
-.projects img {
-    width: 100%;
-    max-width: 380px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+.projects1 img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 
-.project-card {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: #fafafa;
+
+.projects1 .project-card {
+    width: 200px;
+    height: 150px;
+    background: #1d1d1d;
+    color: #fff;
+    padding: 0.8rem;
     border-left: 4px solid #00c8ff;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 380px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    overflow: hidden;
+    word-break: break-word;
 }
+
+
+
+
 
 /* Media section styles */
 .media-grid {
@@ -198,8 +211,8 @@ nav a:hover {
 .media-item canvas {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-  background: #000; /* visible background for canvas/video poster */
+  box-shadow: 0 3px 12px rgba(245, 241, 241, 0.08);
+  background: #eae2e2; 
 }
 
 .hint {
@@ -266,14 +279,14 @@ nav a:hover {
 
 .skill-bar-fill {
   height: 12px;
-  width: 0;            /* Start empty */
+  width: 0;  
   background: #4CAF50;
   border-radius: 10px;
-  transition: width 2s ease; /* Smooth fill animation */
+  transition: width 2s ease; 
 }
 
 
-/* ================= IMAGE SLIDER ================= */
+
 .slider-container {
   position: relative;
   width: 80%;

@@ -21,6 +21,7 @@
     <a href="#about">About</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#contact">Contact</a>
+    <a href="#Flexbox vs Grid">Flexbox vs Grid</a>
 </nav>
 
 <section id="home" class="hero">
@@ -37,12 +38,15 @@
 
 <section id="portfolio" class="section">
     <h2>My Projects</h2>
-    <div class="projects">
-        <img src="image/project1.png" alt="Project 1 Screenshot">
+    <div class="projects1">
+        <a href="https://sep-group.github.io/Plant_Disease_Detection/templates/" target="_blank" rel="noopener noreferrer">
+            <img src="image/project1.png" alt="Project 1 Screenshot">
+        </a>
         <div class="project-card">
             <p>We made this project during our SEP program. It focuses on plant disease detection using advanced machine learning techniques.</p>
         </div>
     </div>
+  
 </section>
 
 <section id="skills">
@@ -103,14 +107,13 @@
   <h2>Media</h2>
 
   <div class="media-grid">
+
     <!-- Video -->
     <div class="media-item">
       <h3>Project Demo (Video)</h3>
-      <!-- Use a poster image if you have one: poster="media/video-poster.jpg" -->
       <video id="demo-video" controls width="480" preload="metadata">
-        <source src="media/video.mp4" type="video/mp4">
-        <!-- Fallback message -->
-        Your browser does not support the video tag. You can <a href="media/video.mp4">download the video</a>.
+          <source src="video/project.mp4" type="video/mp4">
+         Your browser does not support video.
       </video>
     </div>
 
@@ -118,16 +121,15 @@
     <div class="media-item">
       <h3>Project Narration (Audio)</h3>
       <audio id="demo-audio" controls preload="metadata">
-        <source src="media/audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element. <a href="media/audio.mp3">Download audio</a>.
+          <source src="audio/audio.mp3" type="audio/mp3">
+         Your browser does not support audio.
       </audio>
     </div>
 
     <!-- Canvas -->
     <div class="media-item">
       <h3>Canvas Sketch</h3>
-      <canvas id="demo-canvas" width="480" height="270" aria-label="Demo Canvas drawing"></canvas>
-      <p class="hint">This canvas is drawn by JavaScript (simple demo).</p>
+      <canvas id="myCanvas" width="480" height="270" aria-label="myCanvas drawing"></canvas>
     </div>
   </div>
 </section>
@@ -153,7 +155,7 @@
 </section>
 
 <section class="section" id="layout-note">
-    <h2>Flexbox vs Grid — Layout Understanding</h2>
+    <h2>Flexbox vs Grid</h2>
 
     <p><strong>Flexbox</strong> is a one-dimensional layout system that arranges items in
        either a row or a column. It is best used for navigation bars, aligning elements,

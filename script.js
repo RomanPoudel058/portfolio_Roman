@@ -10,7 +10,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 bars.forEach((bar) => observer.observe(bar));
 
-// ========== CONTACT FORM (VALIDATION + LOCALSTORAGE + REDIRECT) ==========
+//CONTACT FORM (VALIDATION + LOCALSTORAGE + REDIRECT)___
 const form = document.getElementById("contact-form");
 
 if (form) {
@@ -61,7 +61,7 @@ if (form) {
   });
 }
 
-// ========== THEME TOGGLE ==========
+// THEME TOGGLE 
 
 // Check saved theme
 if (localStorage.getItem("theme") === "dark") {
@@ -81,13 +81,12 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
-// ========== BACK TO TOP BUTTON ==========
+// BACK TO TOP BUTTON
 
 const backToTop = document.getElementById("backToTop");
 
-// Show/Hide Button on Scroll
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {   // Show after scrolling 300px
+    if (window.scrollY > 300) { 
         backToTop.style.display = "block";
     } else {
         backToTop.style.display = "none";
@@ -102,7 +101,7 @@ backToTop.addEventListener("click", () => {
     });
 });
 
-// ================= IMAGE SLIDER =================
+// IMAGE SLIDER 
 let index = 0;
 const slides = document.querySelectorAll(".slide");
 
@@ -121,4 +120,54 @@ function updateSlider() {
 }
 
 
+const canvas = document.getElementById("myCanvas");
+
+
+if (canvas) {
+  const ctx = canvas.getContext("2d");
+
+
+  ctx.fillStyle = "#1e90ff";
+  ctx.fillRect(20, 20, 260, 110);
+
+  ctx.fillStyle = "white";
+  ctx.font = "16px Arial";
+  ctx.fillText("Hello from Canvas!", 60, 90);
+}
+
+
+const canvas2 = document.getElementById("demo-canvas");
+
+if (canvas2) {
+  const ctx2 = canvas2.getContext("2d");
+  let drawing = false;
+
+  function startDraw(e) {
+    drawing = true;
+    draw(e);
+  }
+
+  function endDraw() {
+    drawing = false;
+    ctx2.beginPath();
+  }
+
+  function draw(e) {
+    if (!drawing) return;
+
+    ctx2.lineWidth = 4;           
+    ctx2.lineCap = "round";       
+    ctx2.strokeStyle = "#000000"; 
+
+    ctx2.lineTo(e.offsetX, e.offsetY);
+    ctx2.stroke();
+    ctx2.beginPath();
+    ctx2.moveTo(e.offsetX, e.offsetY);
+  }
+
+  canvas2.addEventListener("mousedown", startDraw);
+  canvas2.addEventListener("mouseup", endDraw);
+  canvas2.addEventListener("mouseout", endDraw);
+  canvas2.addEventListener("mousemove", draw);
+}
 
